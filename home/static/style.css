@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.todo_form{
+    background-color: rgba(195, 194, 194, 0.776);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo_form form{
+    height: 60vh;
+    background-color: rgba(180, 179, 181, 0.852);
+    width: 40%;
+    border-radius: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+form h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    color: blue;
+    text-transform: capitalize;
+}
+.p_title{
+    display: block;
+    margin: 30px 0px 10px 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.title_form{
+    height: 5vh;
+    width: 90%;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.p_desc{
+    display: block;
+    margin: 20px 0px 10px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.desc_form{
+    height: 20vh;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px;
+}
+.form_btn{
+    margin-top: 20px;
+    height: 5vh;
+    width: 90%;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.todo_heading{
+    height: 20vh;
+    width: 100%;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo_heading h1{
+    color:blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+.td_individual{
+    display: flex;
+    /* background-color: darkmagenta; */
+    flex-wrap: wrap;
+}
+.first_todo{
+    height: 30vh;
+    width: 30vh;
+    background-color: rgba(201, 203, 203, 0.525);
+    margin: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.first_todo h1{
+    margin: 5px;
+    font-size: 20px;
+
+}
+.first_todo p{
+    font-size: 15px;
+    margin: 5px;
+
+}

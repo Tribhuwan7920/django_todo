@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page </title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+</head>
+
+<body>
+
+    <div class="todo_form">
+        <form action="/" method="post">
+            {% csrf_token %} 
+            <h3>create your todo here </h3>
+            <label for="title">
+                <p class="p_title">enter your title</p>
+                <input type="text" name="title" id="title" class="title_form">
+            </label>
+            <label for="desc">
+                <p class="p_desc">enter the description</p>
+                <textarea name="desc" id="desc" class="desc_form"></textarea>
+            </label>
+
+            <input type="submit" value="create todo" class="form_btn">
+        </form>
+    </div>
+
+
+    <section class="todo_data">
+        <div class="todo_heading">
+
+            <h1>your todos</h1>
+        </div>
+
+        <div class="td_individual">
+            
+            {% for item in data %}
+            <div class="first_todo">
+
+                <h1>{{ item.title }}</h1>
+                <p>{{ item.desc }}</p>
+
+                <a href="/delete/{{item.title}}" class="delete">delete </a>
+                <a href="/update/{{item.title}}" class="update">update </a>
+                
+            </div>
+            {% endfor %}
+
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+</head>
+<body>
+    <div class="todo_form">
+        <form action="/update/{{title}}" method="post">
+            {% csrf_token %} 
+            <h3>update your todo here </h3>
+            <label for="title">
+                <p class="p_title">enter your title</p>
+                <input type="text" name="title" id="title" class="title_form">
+            </label>
+            <label for="desc">
+                <p class="p_desc">enter the description</p>
+                <textarea name="desc" id="desc" class="desc_form"></textarea>
+            </label>
+
+            <input type="submit" value="update todo" class="form_btn">
+        </form>
+    </div>
+
+    <section>
+        <h1>previous data </h1>
+        <h3> title : {{ title }}</h3>
+        <h3> description : {{ desc }}</h3>
+    </section>
+    
+</body>
+</html>
